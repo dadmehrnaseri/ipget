@@ -1,0 +1,12 @@
+﻿<button onclick="f1()">Show My Ip Address</button>
+
+<script>
+    const f1 =  () =>{
+        axios({
+            url:'/home/GetIp',
+            method:'get'
+        })
+        .then(res => alert(res.data))
+        .catch(err => console.log(err.message))
+    }
+</script>
